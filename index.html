@@ -69,11 +69,18 @@
                         >
                     </div>
                     <div class="col-md-5">
-                        <img
-                            class="img-fluid d-none d-md-block"
-                            src="img/ebook-cover.png"
-                            alt="ebook cover"
-                        />
+                        <span
+                            class="tt-custom"
+                            data-bs-toggle=""
+                            data-bs-placement="top"
+                            title="Tooltip on top"
+                        >
+                            <img
+                                class="img-fluid d-none d-md-block"
+                                src="img/ebook-cover.png"
+                                alt="ebook cover"
+                            />
+                        </span>
                     </div>
                 </div>
             </div>
@@ -481,8 +488,8 @@
                     <div class="col-lg-6">
                         <form>
                             <label for="email" class="form-label text-white"
-                                >Email address:</label
-                            >
+                                >Email address:
+                            </label>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"
                                     ><i class="bi bi-envelope"></i
@@ -493,9 +500,16 @@
                                     id="email"
                                     placeholder="e.g. tatut90@gmail.com"
                                 />
-                                <i
-                                    class="bi bi-question-circle input-group-text"
-                                ></i>
+                                <span class="input-group-text">
+                                    <span
+                                        class="tt-custom"
+                                        data-bs-placement="bottom"
+                                        title="Enter email address we can reply to"
+                                    >
+                                        <i
+                                            class="bi bi-question-circle"
+                                        ></i> </span
+                                ></span>
                             </div>
 
                             <label for="name" class="form-label text-white"
@@ -524,7 +538,9 @@
                                     <i class="bi bi-chat-right-dots-fill"></i
                                 ></span>
                                 <select id="question" class="form-select">
-                                    <option selected="1">Pricing query</option>
+                                    <option selected value="1">
+                                        Pricing query
+                                    </option>
                                     <option value="2">Two</option>
                                     <option value="3">Other query</option>
                                 </select>
@@ -557,5 +573,9 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <script>
+            const tooltips = document.querySelectorAll(".tt-custom");
+            tooltips.forEach((tt) => new bootstrap.Tooltip(tt));
+        </script>
     </body>
 </html>
