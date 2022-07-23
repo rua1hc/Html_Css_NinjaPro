@@ -64,9 +64,14 @@
                         <a href="#pricing" class="btn btn-primary btn-lg"
                             >Buy Now</a
                         >
-                        <a href="#" class="d-block text-warning my-3"
-                            >Explore my other books</a
+                        <a
+                            class="d-block text-warning"
+                            data-bs-toggle="offcanvas"
+                            href="#sidebar"
+                            role="button"
                         >
+                            Explore my other books
+                        </a>
                     </div>
                     <div class="col-md-5">
                         <span
@@ -85,6 +90,64 @@
                 </div>
             </div>
         </section>
+
+        <!-- OffCanvas -->
+        <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="sidebar"
+            aria-labelledby="offcanvasLabel"
+        >
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">
+                    My Other Books
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
+                    minima ducimus excepturi quasi tempore fugit quis
+                    voluptatibus aut error possimus, tenetur natus magni quam
+                    voluptatem quae eligendi repudiandae delectus eaque!
+                </div>
+                <div class="dropdown mt-3">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                    >
+                        Choose a book title
+                    </button>
+                    <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                    >
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >React Hero Journey</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Conquering Vue.js</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >Levelling up your Next.js</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <section id="pricing" class="bg-warning py-5">
             <div class="container-lg">
